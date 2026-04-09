@@ -3,17 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaniece Dunkley - Business Operations, Marketing & Customer Success Specialist</title>
+    <title>Shaniece Dunkley | Operations, Marketing & Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- EmailJS SDK -->
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-    emailjs.init("LN5n9LIc29QN8ahdS");
+        emailjs.init("LN5n9LIc29QN8ahdS");
     </script>
+
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            align-items: start;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-info p {
+            flex: 1;
+        }
+
+        .project-button {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .gallery-preview-card {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .gallery-cover-image {
+            width: 100%;
+            max-width: 760px;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 25px rgba(217, 92, 229, 0.18);
+        }
+
+        .gallery-preview-card .project-button {
+            align-self: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        #designs .container > p {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 24px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        #about .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #about .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        #about .about-text {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto 34px;
+            text-align: left;
+        }
+
+        #about .about-text h3 {
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        #about .about-text p {
+            font-size: 1.12rem;
+            line-height: 1.95;
+            margin-top: 16px;
+        }
+
+        #about .about-highlight {
+            text-align: center;
+            font-weight: 700;
+            margin-top: 24px;
+        }
+
+        #about .about-image {
+            width: 100%;
+            max-width: 540px;
+            margin: 46px auto 38px;
+            text-align: center;
+        }
+
+        #about .about-image img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 16px;
+            box-shadow: 0 0 28px rgba(217, 92, 229, 0.22);
+        }
+
+        #about .skills-section {
+            width: 100%;
+            max-width: 1120px;
+            margin: 10px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 34px;
+        }
+
+        #about .skills-group {
+            width: 100%;
+            text-align: center;
+        }
+
+        #about .skill-category-label {
+            display: block;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #b8b8b8;
+        }
+
+        #about .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        @media (max-width: 768px) {
+            #about .about-text h3 {
+                font-size: 1.9rem;
+            }
+
+            #about .about-text p {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            #about .about-image {
+                max-width: 100%;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #about .skills-row {
+                gap: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Shaniece Dunkley</a>
@@ -26,139 +194,175 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-    <div class="hero-content">
-        <h1>Hello, I'm <span class="highlight">Shaniece Dunkley</span></h1>
-        <p class="hero-subtitle" id="typewriter"></p>
-        <a href="#projects" class="cta-button">View My Work</a>
-    </div>
-</section>
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Shaniece Dunkley</span></h1>
+            <p class="hero-subtitle" id="typewriter"></p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
 
-   <!-- About Me Section -->
-<section id="about" class="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-             <img src="profilepic.png" alt="Professional Workspace">
-            </div>
-            <div class="about-text">
-                <h3>I drive business growth through operational excellence & strategic marketing.</h3>
-                <p>Business Operations, Marketing & Customer Success Specialist with expertise in transforming businesses through strategic operations and digital marketing. I specialize in operational infrastructure, digital marketing campaigns, brand integration, and creating systems that drive customer retention and revenue growth. From business strategy to comprehensive marketing execution, I deliver measurable results.</p>
-                <div class="skills">
-                    <span class="skill-tag">Marketing Strategy</span>
-                    <span class="skill-tag">Customer Success</span>
-                    <span class="skill-tag">Graphic Design</span>
-                    <span class="skill-tag">CRM Systems</span>
-                    <span class="skill-tag">Process Optimization</span>
-                    <span class="skill-tag">Brand Development</span>
-                    <span class="skill-tag">Video Production</span>
-                    <span class="skill-tag">Business Operations</span>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>I build systems that grow businesses through strategy, marketing and code.</h3>
+
+                    <p>
+                        Business Operations, Marketing and Customer Success Specialist with a strong foundation in transforming businesses through strategy, systems and digital execution. I specialize in operational infrastructure, digital marketing campaigns, brand integration and building systems that improve customer retention and drive revenue growth.
+                    </p>
+
+                    <p>
+                        On top of that, I am also a full stack developer, which means I can take a business need and actually build the technology to solve it. From frontend design to backend logic and databases, I bring a rare combination of operational expertise and hands on technical skill, I do not just create ideas. I turn them into scalable, functional systems that support real business growth.
+                    </p>
+
+                    <p class="about-highlight">Business mindset. Technical execution. All in one.</p>
+                </div>
+
+                <div class="about-image">
+                    <img src="profilepic.png" alt="Professional Workspace">
+                </div>
+
+                <div class="skills-section">
+                    <div class="skills-group">
+                        <div class="skill-category-label">Business &amp; Marketing</div>
+                        <div class="skills-row">
+                            <span class="skill-tag">Marketing Strategy</span>
+                            <span class="skill-tag">Customer Success</span>
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">CRM Systems</span>
+                            <span class="skill-tag">Process Optimization</span>
+                            <span class="skill-tag">Brand Development</span>
+                            <span class="skill-tag">Video Production</span>
+                            <span class="skill-tag">Business Operations</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <div class="skill-category-label">Full Stack Development</div>
+                        <div class="skills-row">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">HTML &amp; CSS</span>
+                            <span class="skill-tag">TailwindCSS</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <div class="skill-category-label">Database &amp; Infrastructure</div>
+                        <div class="skills-row">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Database Management</span>
+                            <span class="skill-tag">JWT Authentication</span>
+                            <span class="skill-tag">Stripe Integration</span>
+                            <span class="skill-tag">Vercel &amp; Render</span>
+                            <span class="skill-tag">Git &amp; GitHub</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Projects Section -->
-<section id="projects" class="projects">
+   <section id="projects" class="projects">
     <div class="container">
         <h2 class="section-title">My Projects</h2>
+
         <div class="projects-grid">
-            <!-- Project 1 - Spa Operations -->
+
+           <div class="project-card">
+    <div class="project-image">
+        <img src="images/kindled-studio.png" alt="Kindled Paper Studio">
+    </div>
+    <div class="project-info">
+        <h3>Kindled Paper Studio</h3>
+        <p>
+            Built and deployed a full stack e commerce platform with secure authentication,
+            product management, shopping cart functionality, Stripe payment integration,
+            and an admin dashboard for order management.
+        </p>
+        <a href="https://kindled-frontend.vercel.app" target="_blank" class="project-button">
+            Live Demo
+        </a>
+    </div>
+</div>
+
             <div class="project-card">
                 <div class="project-image">
                     <img src="images/business-operations.png" alt="Business Operations">
                 </div>
                 <div class="project-info">
-                    <h3>Multi-Business Brand Integration</h3>
-                    <p>Integrated Divine Dermatology & Divine Luxe Spa operations, corrected $1M+ design flaws, established professional operational foundation, and created unified "one-stop shop" brand messaging.</p>
+                    <h3>Multi Business Brand Integration</h3>
+                    <p>Integrated Divine Dermatology and Luxe Derm Spa operations, corrected major design flaws, established a professional operational foundation, and created unified one stop shop brand messaging.</p>
                     <a href="#contact" class="project-button">Learn More</a>
                 </div>
             </div>
 
-            <!-- Project 2 - Weight Loss -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="images/weight-loss-program.png" alt="Weight Loss Program">
                 </div>
                 <div class="project-info">
                     <h3>Weight Loss Program Development</h3>
-                    <p>Reviewed and restructured weight loss program documents, created commercial, developed comprehensive program framework, and built market-ready offering with strategic marketing content.</p>
+                    <p>Reviewed and restructured weight loss program documents, created commercial content, developed a comprehensive program framework, and built a market ready offering with strategic marketing support.</p>
                     <a href="#contact" class="project-button">Learn More</a>
                 </div>
             </div>
 
-            
-            <!-- Project 3 - Digital Marketing -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="images/digital-marketing.png" alt="Digital Marketing">
                 </div>
                 <div class="project-info">
-                    <h3>Digital Marketing & Client Experience</h3>
-                    <p>Managed website content across two brands, created promotional campaigns, designed social media content, optimized booking systems, and established seamless digital client journey.</p>
+                    <h3>Digital Marketing and Client Experience</h3>
+                    <p>Managed website content across two brands, created promotional campaigns, designed social media content, optimized booking systems, and established a seamless digital client journey.</p>
                     <a href="#contact" class="project-button">Learn More</a>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- Design & Marketing Work Section -->
     <section id="designs" class="designs">
         <div class="container">
-            <h2 class="section-title">Design & Marketing Work</h2>
-            <div class="designs-grid">
-                <img src="images/design-1.png" alt="Design 1" class="design-thumbnail">
-                <img src="images/design-2.png" alt="Design 2" class="design-thumbnail">
-                <img src="images/design-3.png" alt="Design 3" class="design-thumbnail">
-                <img src="images/design-4.png" alt="Design 4" class="design-thumbnail">
-                <img src="images/design-5.png" alt="Design 5" class="design-thumbnail">
-                <img src="images/design-6.png" alt="Design 6" class="design-thumbnail">
-                <img src="images/design-7.png" alt="Design 7" class="design-thumbnail">
-                <img src="images/design-8.png" alt="Design 8" class="design-thumbnail">
-                <img src="images/design-9.png" alt="Design 9" class="design-thumbnail">
-                <img src="images/design-10.png" alt="Design 10" class="design-thumbnail">
-                <img src="images/design-11.png" alt="Design 11" class="design-thumbnail">
-                <img src="images/design-12.png" alt="Design 12" class="design-thumbnail">
-                <img src="images/design-13.png" alt="Design 13" class="design-thumbnail">
-                <img src="images/design-14.png" alt="Design 14" class="design-thumbnail">
-                <img src="images/design-15.png" alt="Design 15" class="design-thumbnail">
-                <img src="images/design-16.png" alt="Design 16" class="design-thumbnail">
-                <img src="images/design-17.png" alt="Design 17" class="design-thumbnail">
-                <img src="images/design-18.png" alt="Design 18" class="design-thumbnail">
-                <img src="images/design-19.png" alt="Design 19" class="design-thumbnail">
-                <img src="images/design-20.png" alt="Design 20" class="design-thumbnail">
+            <h2 class="section-title">Design &amp; Marketing Work</h2>
+            <p>A curated look at my branding, marketing and design work.</p>
+
+            <div class="gallery-preview-card">
+                <img src="images/design-1.png" alt="Design Gallery Cover" class="gallery-cover-image">
+                <button class="project-button" onclick="openGallery(0)">View Gallery</button>
             </div>
         </div>
     </section>
 
-    <!-- Modal for Full-Size Images -->
     <div id="imageModal" class="modal">
         <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <img class="modal-content" id="modalImage" alt="Gallery Image">
         <button class="modal-prev">&#10094;</button>
         <button class="modal-next">&#10095;</button>
     </div>
 
-
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
             <form class="contact-form">
-               <input type="text" name="from_name" placeholder="Your Name" class="form-input" required>
-               <input type="email" name="from_email" placeholder="Your Email" class="form-input" required>
-               <textarea name="message" placeholder="Your Message" class="form-textarea" rows="6" required></textarea>
-               <button type="submit" class="submit-button">Send Message</button>
+                <input type="text" name="from_name" placeholder="Your Name" class="form-input" required>
+                <input type="email" name="from_email" placeholder="Your Email" class="form-input" required>
+                <textarea name="message" placeholder="Your Message" class="form-textarea" rows="6" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
             </form>
             <div class="toast" id="formToast" aria-live="polite"></div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="social-links">
             <a href="https://github.com/tomarj18" target="_blank" aria-label="GitHub">
@@ -166,7 +370,7 @@
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/shaniece-dunkley/" target="_blank" aria-label="LinkedIn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
@@ -177,144 +381,144 @@
                 </svg>
             </a>
         </div>
-        <p class="copyright">&copy; 2025 Shaniece Dunkley. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Shaniece Dunkley. All rights reserved.</p>
     </footer>
 
-<script>
-        // Get modal elements
+    <script>
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         const closeBtn = document.querySelector('.modal-close');
         const prevBtn = document.querySelector('.modal-prev');
         const nextBtn = document.querySelector('.modal-next');
-        const thumbnails = document.querySelectorAll('.design-thumbnail');
-        
+
+        const galleryImages = [
+            "images/design-1.png",
+            "images/design-2.png",
+            "images/design-3.png",
+            "images/design-4.png",
+            "images/design-5.png",
+            "images/design-6.png",
+            "images/design-7.png",
+            "images/design-8.png",
+            "images/design-9.png",
+            "images/design-10.png",
+            "images/design-11.png",
+            "images/design-12.png",
+            "images/design-13.png",
+            "images/design-14.png",
+            "images/design-15.png",
+            "images/design-16.png",
+            "images/design-17.png",
+            "images/design-18.png",
+            "images/design-19.png",
+            "images/design-20.png"
+        ];
+
         let currentImageIndex = 0;
-        
-        // Open modal when clicking thumbnail
-        thumbnails.forEach((thumbnail, index) => {
-            thumbnail.addEventListener('click', () => {
-                modal.style.display = 'block';
-                modalImg.src = thumbnail.src;
-                currentImageIndex = index;
-            });
-        });
-        
-        // Close modal
+
+        function openGallery(index) {
+            currentImageIndex = index;
+            modalImg.src = galleryImages[currentImageIndex];
+            modal.style.display = 'flex';
+        }
+
         closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
         });
-        
-        // Close when clicking outside image
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
             }
         });
-        
-        // Previous image
+
         prevBtn.addEventListener('click', () => {
-            currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
-            modalImg.src = thumbnails[currentImageIndex].src;
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            modalImg.src = galleryImages[currentImageIndex];
         });
-        
-        // Next image
+
         nextBtn.addEventListener('click', () => {
-            currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
-            modalImg.src = thumbnails[currentImageIndex].src;
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            modalImg.src = galleryImages[currentImageIndex];
         });
-        
-        // Keyboard navigation
+
         document.addEventListener('keydown', (e) => {
-            if (modal.style.display === 'block') {
+            if (modal.style.display === 'flex') {
                 if (e.key === 'ArrowLeft') prevBtn.click();
                 if (e.key === 'ArrowRight') nextBtn.click();
                 if (e.key === 'Escape') closeBtn.click();
             }
         });
 
-        // Typewriter Effect
-        const typewriterText = "Business Operations, Marketing & Customer Success Specialist";
+        const typewriterText = "Operations, Marketing and Full Stack Developer";
         const typewriterElement = document.getElementById('typewriter');
         let charIndex = 0;
 
         function typeWriter() {
-        if (charIndex < typewriterText.length) {
-        typewriterElement.textContent += typewriterText.charAt(charIndex);
-        charIndex++;
-        setTimeout(typeWriter, 50); // Speed: lower = faster
-       }
- }
+            if (charIndex < typewriterText.length) {
+                typewriterElement.textContent += typewriterText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeWriter, 50);
+            }
+        }
 
-       // Start typewriter when page loads
-       window.addEventListener('load', () => {
-       setTimeout(typeWriter, 500); // Delay before starting
- });
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 500);
+        });
 
-     // contact form handler (EmailJS)
-  document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.querySelector('.contact-form');
-  if (!contactForm) return;
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.querySelector('.contact-form');
+            if (!contactForm) return;
 
-  const submitBtn = contactForm.querySelector('.submit-button');
-  const toast = document.getElementById('formToast');
+            const submitBtn = contactForm.querySelector('.submit-button');
+            const toast = document.getElementById('formToast');
+            let toastTimer;
 
-  let toastTimer;
+            function showToast(message, type = 'success') {
+                if (!toast) return;
+                toast.classList.remove('success', 'error', 'show');
+                toast.textContent = message;
+                toast.classList.add(type);
+                clearTimeout(toastTimer);
+                requestAnimationFrame(() => toast.classList.add('show'));
+                toastTimer = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
 
-  function showToast(message, type = 'success') {
-    if (!toast) return;
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
 
-    toast.classList.remove('success', 'error', 'show');
-    toast.textContent = message;
-    toast.classList.add(type);
+                const from_name = contactForm.querySelector('input[name="from_name"]').value.trim();
+                const from_email = contactForm.querySelector('input[name="from_email"]').value.trim();
+                const message = contactForm.querySelector('textarea[name="message"]').value.trim();
 
-    clearTimeout(toastTimer);
-    requestAnimationFrame(() => toast.classList.add('show'));
+                if (!from_name || !from_email || !message) {
+                    showToast('Please fill out your name, email, and message.', 'error');
+                    return;
+                }
 
-    toastTimer = setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
-  }
+                const formData = { from_name, from_email, message, to_email: from_email };
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const from_name  = contactForm.querySelector('input[name="from_name"]').value.trim();
-    const from_email = contactForm.querySelector('input[name="from_email"]').value.trim();
-    const message    = contactForm.querySelector('textarea[name="message"]').value.trim();
-
-    if (!from_name || !from_email || !message) {
-      showToast('Please fill out your name, email, and message.', 'error');
-      return;
-    }
-
-    const formData = {
-      from_name,
-      from_email,
-      message,
-      to_email: from_email
-    };
-
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    emailjs.send('service_9tvfn1n', 'template_j9qefyv', formData)
-      .then(() => emailjs.send('service_9tvfn1n', 'template_lo3vfjo', formData))
-      .then(() => {
-        showToast('Message sent. Thank you for reaching out.', 'success');
-        contactForm.reset();
-      })
-      .catch((err) => {
-        console.error('EmailJS Error:', err);
-        showToast('Message failed to send. Please try again.', 'error');
-      })
-      .finally(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      });
-  });
-});
-</script>
+                emailjs.send('service_9tvfn1n', 'template_j9qefyv', formData)
+                    .then(() => emailjs.send('service_9tvfn1n', 'template_lo3vfjo', formData))
+                    .then(() => {
+                        showToast('Message sent. Thank you for reaching out.', 'success');
+                        contactForm.reset();
+                    })
+                    .catch((err) => {
+                        console.error('EmailJS Error:', err);
+                        showToast('Message failed to send. Please try again.', 'error');
+                    })
+                    .finally(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
